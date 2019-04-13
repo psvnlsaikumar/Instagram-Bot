@@ -29,11 +29,11 @@ const request = require("request");
   var temp = 1;
   images.forEach(function(url) {
     var ext = url.split(".");
-    var fileName = temp + ext[ext.length - 1];
+    var fileName = "res/images" + temp + ext[ext.length - 1];
 
     //Dwonload happens here
     download(url, fileName, function() {
-      console.log("done with " + fileName);
+      console.log("Successfully downloaded " + fileName);
     });
     temp++;
   });
